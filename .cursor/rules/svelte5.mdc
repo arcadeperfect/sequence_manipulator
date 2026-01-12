@@ -1,0 +1,11 @@
+---
+description: Standards for Svelte 5 and SvelteKit development
+globs: ["**/*.svelte", "**/*.svelte.ts", "**/*.svelte.js"]
+---
+
+# Svelte 5 Rules
+- Use Runes for reactivity: `$state`, `$derived`, `$effect`, `$props`.
+- Do NOT use `export let` for props; use `let { ... } = $props()`.
+- Do NOT use `on:click`; use `onclick={...}`.
+- Event modifiers like `|preventDefault` are deprecated; handle them inside the function.
+- Prefer `.svelte.ts` files for shared logic instead of `.ts` files to use runes.
